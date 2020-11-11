@@ -1,0 +1,25 @@
+    <button class="open" onmouseover="movie()" onmouseout="reImg()">Open Button</button>
+      <div class="modal hidden">
+        <div class="modal_overlay"></div>
+        <div class="modal_content">
+          <h1>TITLE</h1>
+          <img src="room.png">
+          <button>X</button>
+        </div>
+      </div>
+      
+      <script>
+        const openButton = document.querySelector(".open");
+        const modal = document.querySelector(".modal");
+        const overlay = modal.querySelector(".modal_overlay");
+        const closeBtn = modal.querySelector("button");
+        const openModal = () => {
+          modal.classList.remove("hidden");
+        }
+        const closeModal = () => {
+          modal.classList.add("hidden");
+        }
+        overlay.addEventListener("click", closeModal)
+        closeBtn.addEventListener("click", closeModal)
+        openButton.addEventListener("click", openModal)
+      </script>

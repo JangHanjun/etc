@@ -81,57 +81,48 @@ img{
 .button{
   display: inline-block;
 }
-input[id*="popup"] {
-  display: none;
-}
-input[id*="popup"] + label {
-  display: inline-block;
-  padding: 20px;
-  background: white;
+
+button{
+  all: unset;
+  background-color: white;
   color: black;
+  padding: 5px 20px;
+  border-radius: 5px;
+  cursor: pointer;
 }
-input[id*="popup"] + label + div {
-  position: fixed;;
+.modal{
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 100;
+  /*팝업창이 중앙에 나오게 함*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-input[id*="popup"] + label + div > div {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 500px;
-  height: 500px;
-  background: white;
-  z-index: 2;
-}
-input[id*="popup"] + label + div > div >label{
-  position: absolute;
-  top: 0;
-  left: 0;
+.modal_overlay{
+  background-color: rgba(0, 0, 0, 0.6);
   width: 100%;
   height: 100%;
-  background: #dd5347
-  z-index: 1;
-}
-input[id*="popup"] + label + div > label{
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 1;
 }
-input[id*="popup"] + label + div {
-  opacity: 0;
-  visibility: hidden;
-  transition: all 1s;
+.modal_content{
+  background-color: white;
+  padding: 10px 100px;
+  text-align: center;
+  border-radius: 5px;
+  position: relative;
+  width: 60%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+
+
 }
-input[id*="popup"]:checked + label + div {
-  opacity: 1;
-  visibility: visible;
+h1{
+  margin: 0;
+}
+.hidden{
+  /*이 클래스를 붙이고 떼면서 팝엉창 닫는 기능을 넣음*/
+  display: none;
 }
