@@ -75,21 +75,7 @@ img{
 }
 
 
-.button_div{
-  text-align: center;
-}
-.button{
-  display: inline-block;
-}
 
-button{
-  all: unset;
-  background-color: white;
-  color: black;
-  padding: 5px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-}
 .modal{
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   position: fixed;
@@ -122,7 +108,53 @@ button{
 h1{
   margin: 0;
 }
-.hidden{
-  /*이 클래스를 붙이고 떼면서 팝엉창 닫는 기능을 넣음*/
-  display: none;
+.modal.hidden{
+  visibility: hidden;
+}
+.modal_content{
+  
+}
+/*버튼 CSS*/
+/*정렬*/
+.button_div{
+  text-align: center;
+}
+.button{
+  display: inline-block;
+}
+/*효과*/
+button{
+  background:#e6d5b8;
+  color:#fff;
+  border:none;
+  height:60px;
+  font-size:1.6em;
+  padding:0 2em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+}
+button:hover{
+  background:#fff;
+  color:#e6d5b8;
+}
+button:before,button:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: #e6d5b8;
+  transition:400ms ease all;
+}
+button:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+button:hover:before,button:hover:after{
+  width:100%;
+  transition:800ms ease all;
 }

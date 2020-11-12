@@ -13,6 +13,7 @@ function trip(){
 function music(){
   document.getElementById('mainimg').src = "room_Cafe.png"
 }
-function sleep(){
+function bed(){
   document.getElementById('mainimg').src = "room_Bed.png"
 }
+

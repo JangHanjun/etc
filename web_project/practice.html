@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
     <script src="./home.js"></script>
+    
     <title>practice</title>
   </head>
 
@@ -23,7 +24,7 @@
 
     <div class="button_div">
 
-      <button id="open1" onmouseover="movie()" onmouseout="reImg()">Open1</button>
+      <button class="btn" id="open0" onmouseover="movie()" onmouseout="reImg()">MOVIE</button>
       <div class="modal hidden">
         <div class="modal_overlay"></div>
         <div class="modal_content">
@@ -32,7 +33,7 @@
         </div>
       </div>
 
-      <button id="open2" onmouseover="trip()" onmouseout="reImg()">Open2</button>
+      <button class="btn" id="open1" onmouseover="trip()" onmouseout="reImg()">TRIP</button>
       <div class="modal hidden">
         <div class="modal_overlay"></div>
         <div class="modal_content">
@@ -40,9 +41,27 @@
         </div>
       </div>
 
+      <button class="btn" id="open2" onmouseover="bed()" onmouseout="reImg()">SLEEP</button>
+      <div class="modal hidden">
+        <div class="modal_overlay"></div>
+        <div class="modal_content">
+          <img src="room_Bed.png">
+        </div>
+      </div>
+
+      <button class="btn" id="open3" onmouseover="music()" onmouseout="reImg()">MUSIC</button>
+      <div class="modal hidden">
+        <div class="modal_overlay"></div>
+        <div class="modal_content">
+          <img src="room_Cafe.png">
+        </div>
+      </div>
+
       <script>
+        const o0 = document.getElementById("open0");
         const o1 = document.getElementById("open1");
         const o2 = document.getElementById("open2");
+        const o3 = document.getElementById("open3");
         const modal = document.getElementsByClassName("modal");
         const overlay = document.getElementsByClassName("modal_overlay");
         function open(i){
@@ -55,18 +74,28 @@
         }
         function wBtn(event) {
           switch(event.target.id){
-            case 'open1':
+            case 'open0':
               open(0);
               close(0);
               break;
-            case 'open2':
+            case 'open1':
               open(1);
               close(1);
               break;
+            case 'open2':
+              open(2);
+              close(2);
+              break;
+            case 'open3':
+              open(3);
+              close(3);
+              break;
           }
         }
+        o0.addEventListener('click', wBtn);
         o1.addEventListener('click', wBtn);
         o2.addEventListener('click', wBtn);
+        o3.addEventListener('click', wBtn);
       </script>
 
     <div class="img">
