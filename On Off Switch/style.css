@@ -1,20 +1,12 @@
-body{
-    padding: 0;
-    margin: 0;
-}
+
 input[type="checkbox"]{
     -webkit-appearance: none;
     appearance: none;
-    height: 100px;
-    width: 400px;/*크기조정!*/
+    height: 50px;
+    width: 100px;/*크기조정!*/
     background-color: #34384b;
     border-radius: 50px;
     position: absolute;
-    margin: auto;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
     cursor: pointer;
     outline: none;
     transition:  0.3s;
@@ -22,12 +14,12 @@ input[type="checkbox"]{
 input[type="checkbox"]:before{
     content: "";
     position: absolute;
-    height: 80px;
-    width: 80px;
+    height: 40px;
+    width: 40px;
     background-color: #d5d5d5;
     border-radius: 50%;
     left: 20px;
-    top: 10px;
+    top: 5px;
     transition:  0.3s;
 }
 input[type="checkbox"]:after{
@@ -35,7 +27,7 @@ input[type="checkbox"]:after{
     position: absolute;
     color: #d5d5d5;
     font-size: 95px;
-    left: 450px;
+    left: 100px;
     bottom: -5px;
     letter-spacing: 1px;
     transition:  0.3s;
@@ -45,7 +37,7 @@ input[type="checkbox"]:checked{
 }
 input[type="checkbox"]:checked:before{
     background-color: #1f212d;
-    left: 290px;    /*크기조정!*/
+    left: 80px;    /*크기조정!*/
 }
 input[type="checkbox"]:checked:after{
     content: "NO";
